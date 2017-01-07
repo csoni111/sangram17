@@ -1,1 +1,1 @@
-web: gunicorn iit_news.wsgi:application --log-file -
+web: gunicorn sangram.wsgi:application --log-file -
