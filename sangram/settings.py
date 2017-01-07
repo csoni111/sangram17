@@ -26,7 +26,7 @@ SECRET_KEY = 'oq5)%fan-2i_r12o)st%pu5j5xf(bogo9i99zh@7b8qb^&md#-'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [u'sangram17.herokuapp.com',u'register.sangramiitr.in',u'localhost']
 
 
 # Application definition
