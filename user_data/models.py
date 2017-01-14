@@ -11,4 +11,23 @@ class MyRegistrationSupplement(RegistrationSupplementBase):
 
     def __str__(self):
         # a summary of this supplement
-        return "%s (%s)" % (self.realname, self.age)
+        return "%s (%s)" % (self.realname, self.age)	
+
+# class College(models.Model) :
+# 	name = models.CharField(max_length=50)
+# 	designation = models.CharField(max_length=50)
+# 	college = models.CharField(max_length=50)
+# 	city = models.CharField(max_length=50)
+# 	email = models.CharField(max_length=50)
+# 	mobile = models.CharField(max_length=10)
+
+# class MaleEvent(models.Model) :
+# 	name = models.CharField(max_length=50)
+# 	colleges = models.ForeignKey(College)
+
+# class FemaleEvent(models.Model) :
+# 	name = models.CharField(max_length=50)
+# 	colleges = models.ForeignKey(College)
+
+
+

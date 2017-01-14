@@ -32,13 +32,13 @@ ALLOWED_HOSTS = [u'sangram17.herokuapp.com',u'register.sangramiitr.in',u'localho
 # Application definition
 
 INSTALLED_APPS = [
-    'registration',
-    'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'django.contrib.admin',
+    'registration',
     'user_data',
 ]
 
@@ -141,8 +141,6 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS = (
     os.path.join(PROJECT_ROOT, 'static'),
 )
-
-STATIC_URL = '/static/'
 
 EMAIL_HOST = 'smtp.sendgrid.net'
 EMAIL_HOST_USER = 'csoni111'
