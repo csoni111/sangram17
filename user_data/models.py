@@ -1,33 +1,23 @@
-from __future__ import unicode_literals
 from django.db import models
-from django.utils.encoding import python_2_unicode_compatible
-from registration.supplements.base import RegistrationSupplementBase
 
-class MyRegistrationSupplement(RegistrationSupplementBase):
+class College(models.Model) :
+	name = models.CharField(max_length=50)
+	designation = models.CharField(max_length=50)
+	college = models.CharField(max_length=50)
+	city = models.CharField(max_length=50)
+	email = models.CharField(max_length=50)
+	mobile = models.CharField(max_length=10)
+	mevents = models.ManyToManyField(MaleEvent)
+	fevents = models.ManyToManyField(FemaleEvent)
+	status = models.BooleanField(initial=False)
 
-    realname = models.CharField("Real name", max_length=100, help_text="Please fill your real name")
-    age = models.IntegerField("Age")
-    remarks = models.TextField("Remarks", blank=True)
+class MaleEvent(models.Model) :
+	name = models.CharField(max_length=50)
+	max_player = models.IntegerField("Max Players")
 
-    def __str__(self):
-        # a summary of this supplement
-        return "%s (%s)" % (self.realname, self.age)	
-
-# class College(models.Model) :
-# 	name = models.CharField(max_length=50)
-# 	designation = models.CharField(max_length=50)
-# 	college = models.CharField(max_length=50)
-# 	city = models.CharField(max_length=50)
-# 	email = models.CharField(max_length=50)
-# 	mobile = models.CharField(max_length=10)
-
-# class MaleEvent(models.Model) :
-# 	name = models.CharField(max_length=50)
-# 	colleges = models.ForeignKey(College)
-
-# class FemaleEvent(models.Model) :
-# 	name = models.CharField(max_length=50)
-# 	colleges = models.ForeignKey(College)
+class FemaleEvent(models.Model) :
+	name = models.CharField(max_length=50)
+	max_player = models.IntegerField("Max Players")
 
 
 
